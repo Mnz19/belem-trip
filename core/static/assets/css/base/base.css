@@ -1,0 +1,82 @@
+body, html{
+    height: 100%; 
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    font-size: 20px;
+}
+
+.carousel img {
+    filter: brightness(45%);
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel {
+    height: 100vh;
+}
+
+.carousel p, h5{
+    font-size: 55px;
+}
+
+main {
+    background-color: #062726;
+    color: white;
+}
+
+.tracos {
+    background-image: url("../../../images/traços.png");
+    background-position: center;
+    background-size: contain;
+    height: 60px;
+    width: 100vw;
+}
+
+.inverso {
+    transform: rotate(180deg);
+}
+
+.parallax {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../images/belem_01.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.foto {
+    height: 700px;
+    background-image: url("../../../images/ver-o-peso.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+.row {
+    padding-left: 2rem;
+}
+
+.elementos_fundo {
+    position: absolute;
+    z-index: 0;
+}
+
+.fig1 {
+    bottom: -23.6rem;
+    left: -5rem;
+}
+
+.fig2 {
+    bottom: -95.6rem;
+    right: 0rem;
+    position: absolute;
+}
