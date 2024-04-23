@@ -1,3 +1,6 @@
+*{
+    font-family: "Noto Serif", serif;
+}
 body, html{
     height: 100%; 
 }
@@ -7,7 +10,7 @@ body {
 }
 
 nav {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .carousel img {
@@ -20,8 +23,15 @@ nav {
     height: 100vh;
 }
 
-.carousel p, h5{
+.carousel p{
+    font-size: 50px;
+    
+}
+
+.carousel h5{
     font-size: 55px;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
 }
 
 main {
@@ -79,4 +89,8 @@ main {
     bottom: -95.6rem;
     right: 0rem;
     position: absolute;
+}
+
+.footer{
+    background-color: #1a1a1a;
 }
