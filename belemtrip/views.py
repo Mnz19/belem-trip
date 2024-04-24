@@ -117,7 +117,6 @@ class HoteisViews(ListView):
     
     def get_queryset(self):
         query =  super().get_queryset()
-        queryset = super().get_queryset()
         filtro_nome = self.request.GET.get('search')
         filtro_star = self.request.GET.get('star')
         
