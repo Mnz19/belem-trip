@@ -6,20 +6,18 @@
     <form method="GET" action="" class="row g-3">
         <div class="col-md-6">
             <div class="input-group">
-                <span class="input-group-text" id="basic-addon2">Nome do Hotel</span>
+                <span class="input-group-text" id="basic-addon2">Nome do ponto</span>
                 <input type="text" name="search" class="form-control" aria-describedby="basic-addon2">
             </div>
         </div>
         <div class="col-md-6">
             <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">Estrelas</span>
-                <select name="star" class="form-select" aria-describedby="basic-addon3">
+                <span class="input-group-text" id="basic-addon1">Categoria</span>
+                <select name="category" class="form-select" aria-describedby="basic-addon3">
                     <option value="">Selecione...</option>
-                    <option value="1">⭐</option>
-                    <option value="2">⭐⭐</option>
-                    <option value="3">⭐⭐⭐</option>
-                    <option value="4">⭐⭐⭐⭐</option>
-                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    {% for categoria in categorias %}
+                        <option value="{{ categoria }}">{{ categoria }}</option>
+                    {% endfor %}
                 </select>
             </div>
         </div>
@@ -28,32 +26,30 @@
         </div>
     </form>
 </div>
-{% if hoteis %}
+{% if pontos %}
 <div class="container pt-3">
     <div class="d-flex flex-column flex-wrap justify-content-top align-content-center" style="min-height: 90vh;">
-        {% for hotel in hoteis %}
+        {% for ponto in pontos %}
             <div class="card p-0 m-0 mb-3"  style="height: 300px; width: 80vw;">
                 <div class="card-body p-0 m-0 ">
                     <div class="row w-100 h-100 p-0 m-0">
                         <div class="col-8 d-flex flex-column justify-content-evenly">
                             <div>
-                                <h2 class="card-title"><strong>{{ hotel.name }}</strong></h2>
+                                <h2 class="card-title"><strong>{{ ponto.name }}</strong></h2>
                                 <h4 class="card-title">
                                     <strong>
-                                    {% for _ in "x"|ljust:hotel.star %}
-                                        ⭐
-                                    {% endfor %}
+                                        {{ ponto.category}}
                                     </strong>
                                 </h4>
                             </div>
                             <hr>
                             <div>
-                                <h5 class="card-title">📍 {{ hotel.address }}</h5>
-                                <span class="card-text d-block">📞 {{hotel.phone}}</span>
+                                <h5 class="card-title">📍 {{ ponto.address }}</h5>
+                                <span class="card-text d-block">📞 {{ponto.phone}}</span>
                             </div>
-                            <a href="{{ hotel.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
+                            <a href="{{ ponto.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
                         </div>
-                        <div class="col p-0 m-0 w-100" style="background-Image: url('{{ hotel.image.url }}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
+                        <div class="col p-0 m-0 w-100" style="background-Image: url('{{ ponto.image.url }}'); background-size: cover; background-position: center;">
                         </div>
                     </div>
                 </div>
@@ -84,7 +80,7 @@
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center" style="color: white;">Nenhum Hotel encontrado</h1>
+            <h1 class="text-center" style="color: white;">Nenhum ponto turístico encontrado</h1>
         </div>
     </div>
 </div>

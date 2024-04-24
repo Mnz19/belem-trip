@@ -1,3 +1,5 @@
+from typing import Any
+from django.db.models.query import QuerySet
 from django.views import View
 from django.views.generic import ListView
 from django.shortcuts import render
@@ -14,6 +16,20 @@ class EventosViews(ListView):
     template_name = "eventos.html"
     context_object_name = 'eventos'
     paginate_by = 10
+    
+    def get_queryset(self):
+        query = super().get_queryset()
+        
+        filtro_data = self.request.GET.get('date')
+        filtro_nome = self.request.GET.get('search')
+        
+        if filtro_data:
+            query = query.filter(date=filtro_data)
+        
+        if filtro_nome:
+            query = query.filter(title__startswith=filtro_nome)
+        
+        return query
     
 class NoticiasViews(TemplateView):
     template_name = "noticias.html"
@@ -73,8 +89,66 @@ class RestaurantesViews(ListView):
     context_object_name = 'restaurantes'
     paginate_by = 5
     
+    def get_queryset(self):
+        query = super().get_queryset()
+        filtro_nome = self.request.GET.get('search')
+        filtro_categoria = self.request.GET.get('category')
+        
+        if filtro_nome:
+            query = query.filter(name__startswith=filtro_nome)
+        
+        if filtro_categoria:
+            query = query.filter(category=filtro_categoria)
+        
+        return query
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categorias'] = RestaurantCategory.objects.all()
+        return context
+    
 class HoteisViews(ListView):
     model = Hotel
     template_name = "hoteis.html"
     context_object_name = 'hoteis'
     paginate_by = 5
+    
+    def get_queryset(self):
+        query =  super().get_queryset()
+        queryset = super().get_queryset()
+        filtro_nome = self.request.GET.get('search')
+        filtro_star = self.request.GET.get('star')
+        
+        if filtro_nome:
+            query = query.filter(name__startswith=filtro_nome)
+
+        if filtro_star:
+            query = query.filter(star=filtro_star)
+        
+        return query
+    
+class PontosTuristicosViews(ListView):
+    model = TouristSpot
+    template_name = "pontos_turisticos.html"
+    context_object_name = 'pontos'
+    paginate_by = 5
+    
+    def get_queryset(self):
+        query = super().get_queryset()
+        filtro_nome = self.request.GET.get('search')
+        filtro_categoria = self.request.GET.get('category')
+        
+        if filtro_nome:
+            query = query.filter(name__startswith=filtro_nome)
+        
+        if filtro_categoria:
+            categoria_id = TouristSpotCategory.objects.filter(name=filtro_categoria).values_list('id', flat=True).first()
+            if categoria_id is not None:
+                query = query.filter(category=categoria_id)
+        
+        return query
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categorias'] = TouristSpotCategory.objects.all()
+        return context

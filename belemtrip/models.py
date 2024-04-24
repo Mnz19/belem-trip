@@ -28,7 +28,7 @@ class News(Base):
         verbose_name = "Notícia"
         verbose_name_plural = "Notícias"
 class Event(Base):
-    title = models.CharField("Título", max_length=25)
+    title = models.CharField("Título", max_length=255)
     description = models.TextField("Descrição")
     date = models.DateField("Data", auto_now=False, auto_now_add=False , default=None)
     hour = models.TimeField("Hora", auto_now=False, auto_now_add=False , default=None)
@@ -88,7 +88,6 @@ class RestaurantCategory(Base):
 
 class TouristSpotCategory(Base):
     name = models.CharField("Nome", max_length=25)
-    phone = models.CharField("Telefone", max_length=15, blank=True, null=True)
     slug = models.SlugField("Slug", max_length=50, unique=True, blank=True, editable=False)
     
     def save(self, *args, **kwargs):

@@ -2,6 +2,30 @@
 {% load static %}
     
 {% block content %}
+<div class="row mb-3">
+    <form method="GET" action="" class="row g-3">
+        <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon2">Nome do Restaurante</span>
+                <input type="text" name="search" class="form-control" aria-describedby="basic-addon2">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">Categoria</span>
+                <select name="category" class="form-select" aria-describedby="basic-addon3">
+                    <option value="">Selecione...</option>
+                    {% for categoria in categorias %}
+                        <option value="{{ categoria }}">{{ categoria }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+        </div>
+    </form>
+</div>
 {% if restaurantes %}
 <div class="container pt-3">
     <div class="d-flex flex-column flex-wrap justify-content-top align-content-center" style="min-height: 90vh;">
