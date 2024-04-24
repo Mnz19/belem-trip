@@ -31,6 +31,7 @@ class Event(Base):
     title = models.CharField("Título", max_length=25)
     description = models.TextField("Descrição")
     date = models.DateField("Data")
+    hour = models.TimeField("Hora")
     location = models.CharField("Local", max_length=25 , blank=True, null=True)
     website = models.URLField("Website", null=True, blank=True)
     image = models.ImageField("Imagem", upload_to="events", null=True, blank=True)
