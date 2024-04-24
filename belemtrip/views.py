@@ -98,7 +98,9 @@ class RestaurantesViews(ListView):
             query = query.filter(name__startswith=filtro_nome)
         
         if filtro_categoria:
-            query = query.filter(category=filtro_categoria)
+            categoria_id = RestaurantCategory.objects.filter(name=filtro_categoria).values_list('id', flat=True).first()
+            if categoria_id is not None:
+                query = query.filter(category=categoria_id)
         
         return query
     

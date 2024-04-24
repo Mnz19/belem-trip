@@ -44,26 +44,12 @@
                 </nav>
             </div>
     {% else %}
-        <div class="container pt-3">
-            <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img src="https://veja.abril.com.br/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-25-at-10.54.15.jpeg?quality=90&strip=info&crop=1&resize=1080,565" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title
-                                ">TITULO</h5>
-                                <p class="card-text">{% lorem 1 b random %}</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="{{ noticia.url }}" class="btn btn-sm btn-outline-secondary">Ver mais</a>
-                                    </div>
-                                    <small class="text-muted
-                                    ">{{ noticia.publishedAt }}</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center" style="color: white;">Nenhuma noticia encontrado</h1>
             </div>
         </div>
+    </div>
     {% endif %}
 {% endblock %}

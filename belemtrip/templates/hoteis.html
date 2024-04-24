@@ -53,7 +53,13 @@
                             </div>
                             <a href="{{ hotel.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
                         </div>
-                        <div class="col p-0 m-0 w-100" style="background-Image: url('{{ hotel.image.url }}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
+                        {% if hotel.image %}
+                            <div class="col p-0 m-0 w-100" style="background-Image: url('{{ hotel.image.url }}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
+                            </div>
+                        {% else %}
+                            <div class="col p-0 m-0 w-100" style="background-Image: url('{% static 'images/no_found_image.jpg' %}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
+                            </div>
+                        {% endif %}
                         </div>
                     </div>
                 </div>
