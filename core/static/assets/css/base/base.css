@@ -3,6 +3,7 @@
 }
 body, html{
     height: 100%; 
+    width: 100%;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 nav {
-    font-size: 18px;
+    font-size: 23px;
 }
 
 .carousel img {
@@ -52,7 +53,7 @@ main {
 }
 
 .parallax {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../images/belem_01.jpg");
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../images/THEATRO.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -64,15 +65,12 @@ main {
     text-align: center;
 }
 
-.foto {
+.mapa {
     height: 700px;
-    background-image: url("../../../images/ver-o-peso.webp");
-    background-position: center;
-    background-size: cover;
 }
 
 .row {
-    padding-left: 2rem;
+    padding: 1rem;
 }
 
 .elementos_fundo {
