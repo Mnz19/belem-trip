@@ -4,27 +4,25 @@
 {% block content %}
 {% if eventos %}
 <div class="container pt-3">
-    <div class="d-flex flex-row flex-wrap justify-content-center">
+    <div class="d-flex flex-row flex-wrap justify-content-center" style="min-height: 90vh;">
         {% for evento in eventos %}
-            <div class="card p-0 m-0 border-0 mb-3"  style="height: 300px; width: 1100px;">
-                <div class="card-body p-0 m-0">
-                    <!-- Linha para a data e o nome do evento -->
+            <div class="card p-0 m-0 mb-3"  style="height: 300px; width: 1100px;">
+                <div class="card-body p-0 m-0 ">
                     <div class="row w-100 h-100 p-0 m-0">
                         <div class="col-8 d-flex flex-column justify-content-evenly">
                             <div>
                                 <h2 class="card-title"><strong>📅 {{ evento.date }}</strong></h2>
                                 <h2 class="card-title"><strong>🕗 {{ evento.hour }}</strong></h2>
-                                
                             </div>
                             <hr>
                             <div>
                                 <h4 class="card-title">🎉 {{ evento.title }}</h4>
-                                <span class="card-text d-block">📌 Rod. Augusto Montenegro, s/n - Km 03 - Mangueirão</span>
+                                <span class="card-text d-block">📌 {{evento.location}}</span>
                                 <span class="card-text">📝 {{ evento.description }}</span>
                             </div>
                             <a href="{{ evento.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
                         </div>
-                        <div class="col p-0 m-0 w-100" style="background-Image: url('{{ evento.image.url }}'); background-size: cover; background-position: center;">
+                        <div class="col p-0 m-0 w-100" style="background-Image: url('{{ evento.image.url }}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
                         </div>
                     </div>
                 </div>
@@ -53,25 +51,10 @@
 </nav>
 </div>
 {% else %}
-<div class="container pt-3">
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
     <div class="row">
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="https://veja.abril.com.br/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-25-at-10.54.15.jpeg?quality=90&strip=info&crop=1&resize=1080,565"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title
-                                ">TITULO</h5>
-                    <p class="card-text">{% lorem 1 b random %}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="{{ noticia.url }}" class="btn btn-sm btn-outline-secondary">Ver mais</a>
-                        </div>
-                        <small class="text-muted
-                                    ">{{ noticia.publishedAt }}</small>
-                    </div>
-                </div>
-            </div>
+        <div class="col-12">
+            <h1 class="text-center" style="color: white;">Nenhum evento encontrado</h1>
         </div>
     </div>
 </div>
