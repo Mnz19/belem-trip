@@ -66,3 +66,9 @@ class NoticiasViews(TemplateView):
         else:
             noticias = None
         return context
+
+class RestaurantesViews(ListView):
+    model = Restaurant
+    template_name = "restaurantes.html"
+    context_object_name = 'restaurantes'
+    paginate_by = 10

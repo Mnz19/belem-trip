@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+{% block content %}
+{% if restaurantes %}
+<div class="container pt-3">
+    <div class="d-flex flex-row flex-wrap justify-content-center" style="min-height: 90vh;">
+        {% for restaurante in restaurantes %}
+            <div class="card m-3 shadow rounded-0" style="width: 500px; min-height: 520px; max-height: 520px;">
+                <div class="card-img-top" style="max-height: 290px; height: 290px; min-height: 290px; background-image: url('{{ restaurante.image.url }}'); object-fit: cover;" alt="Imagem do restaurante">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">🍽️ {{ restaurante.name }} </h5>
+                    <p class="card-text" style="max-height: 90px; overflow: hidden; text-overflow: ellipsis;">📝{{ restaurante.description }} </p>
+                    <p class="card-text" style="max-height: 90px; overflow: hidden; text-overflow: ellipsis;">📍{{ restaurante.address }} </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">⭐{{ restaurante.star }} </small>
+                        <div class="btn-group">
+                            <a href="{{ restaurante.website }}" class="btn btn-success mt-1" target="_blank">🌐 Ver mais </a>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        {% endfor %}
+    </div>
+</div>
+{% else %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center" style="color: white;">Nenhum restaurante encontrado</h1>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
