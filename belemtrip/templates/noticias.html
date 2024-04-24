@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+{% block content %}
+    {% if noticias %}
+            <div class="container pt-3">
+                <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+                    {% for noticia in noticias %}
+                        <div class="card m-3 shadow rounded-0" style="width: 500px; min-height:520px; max-height:520px;">
+                            <img src="{{ noticia.urlToImage }}" class="card-img-top" style="max-height: 290px; height:290px; min-height:290px; object-fit:cover;" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title
+                                ">{{ noticia.title }}</h5>
+                                <p class="card-text" style="max-height: 90px; overflow: hidden; text-overflow: ellipsis;">{{ noticia.description }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="{{ noticia.url }}" class="btn btn-success mt-1" target="_blank">Ver mais</a>
+                                    </div>
+                                    <small class="text-muted
+                                    ">{{ noticia.publishedAt }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        {% if page_obj.has_previous %}
+                            <li class="page-item"><a class="page-link" href="?page=1">Primeiro</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+                        {% endif %}
+                        {% for num in page_obj.paginator.page_range %}
+                            {% if page_obj.number == num %}
+                                <li class="page-item active"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Proximo</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Ultimo</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+    {% else %}
+        <div class="container pt-3">
+            <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="https://veja.abril.com.br/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-25-at-10.54.15.jpeg?quality=90&strip=info&crop=1&resize=1080,565" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title
+                                ">TITULO</h5>
+                                <p class="card-text">{% lorem 1 b random %}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="{{ noticia.url }}" class="btn btn-sm btn-outline-secondary">Ver mais</a>
+                                    </div>
+                                    <small class="text-muted
+                                    ">{{ noticia.publishedAt }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

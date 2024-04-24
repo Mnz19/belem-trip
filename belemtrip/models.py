@@ -32,7 +32,7 @@ class Event(Base):
     description = models.TextField("Descrição")
     date = models.DateField("Data", auto_now=False, auto_now_add=False , default=None)
     hour = models.TimeField("Hora", auto_now=False, auto_now_add=False , default=None)
-    location = models.CharField("Local", max_length=25 , blank=True, null=True)
+    location = models.CharField("Local", max_length=255 , blank=True, null=True)
     website = models.URLField("Website", null=True, blank=True)
     image = models.ImageField("Imagem", upload_to="events", null=True, blank=True)
     slug = models.SlugField("Slug", max_length=50, unique=True, blank=True, editable=False)
