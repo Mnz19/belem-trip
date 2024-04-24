@@ -54,6 +54,7 @@ class Place(Base):
     description = models.TextField("Descrição", blank=True, null=True)
     address = models.CharField("Endereço", max_length=50)
     image = models.ImageField("Imagem", upload_to="places", null=True, blank=True)
+    coordenada = models.CharField("Coordenadas", max_length=50, blank=True, null=True)
     slug = models.SlugField("Slug", max_length=50, unique=True, blank=True, editable=False)
 
     def save(self, *args, **kwargs):
