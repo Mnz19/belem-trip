@@ -2,19 +2,19 @@
 {% load static %}
     
 {% block content %}
-{% if restaurantes %}
+{% if hoteis %}
 <div class="container pt-3">
     <div class="d-flex flex-column flex-wrap justify-content-top align-content-center" style="min-height: 90vh;">
-        {% for restaurante in restaurantes %}
+        {% for hotel in hoteis %}
             <div class="card p-0 m-0 mb-3"  style="height: 300px; width: 1100px;">
                 <div class="card-body p-0 m-0 ">
                     <div class="row w-100 h-100 p-0 m-0">
                         <div class="col-8 d-flex flex-column justify-content-evenly">
                             <div>
-                                <h2 class="card-title"><strong>{{ restaurante.name }}</strong></h2>
+                                <h2 class="card-title"><strong>{{ hotel.name }}</strong></h2>
                                 <h4 class="card-title">
                                     <strong>
-                                    {% for _ in "x"|ljust:restaurante.star %}
+                                    {% for _ in "x"|ljust:hotel.star %}
                                         ⭐
                                     {% endfor %}
                                     </strong>
@@ -22,13 +22,12 @@
                             </div>
                             <hr>
                             <div>
-                                <h5 class="card-title">📍 {{ restaurante.address }}</h5>
-                                <span class="card-text d-block">📞 {{restaurante.phone}}</span>
-                                <span class="card-text">🏷️ {{ restaurante.category }}</span>
+                                <h5 class="card-title">📍 {{ hotel.address }}</h5>
+                                <span class="card-text d-block">📞 {{hotel.phone}}</span>
                             </div>
-                            <a href="{{ restaurante.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
+                            <a href="{{ hotel.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
                         </div>
-                        <div class="col p-0 m-0 w-100" style="background-Image: url('{{ restaurante.image.url }}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
+                        <div class="col p-0 m-0 w-100" style="background-Image: url('{{ hotel.image.url }}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
                         </div>
                     </div>
                 </div>
@@ -59,7 +58,7 @@
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center" style="color: white;">Nenhum restaurante encontrado</h1>
+            <h1 class="text-center" style="color: white;">Nenhum Hotel encontrado</h1>
         </div>
     </div>
 </div>

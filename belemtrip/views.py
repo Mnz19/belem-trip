@@ -71,4 +71,10 @@ class RestaurantesViews(ListView):
     model = Restaurant
     template_name = "restaurantes.html"
     context_object_name = 'restaurantes'
-    paginate_by = 10
+    paginate_by = 5
+    
+class HoteisViews(ListView):
+    model = Hotel
+    template_name = "hoteis.html"
+    context_object_name = 'hoteis'
+    paginate_by = 5
