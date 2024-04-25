@@ -18,6 +18,8 @@ Bem-vindo ao Belem Trip! Este projeto Django foi desenvolvido para fornecer info
 
 ## Administração
 
+**URL ADMIN** : https://belem-trip.fly.dev/admin
+
 **Usuário**: admin
 
 **Senha**: asenha123
