@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
     
 {% block content %}
 <div class="row mb-3">
     <form method="GET" action="" class="row g-3">
         <div class="col-md-6">
             <div class="input-group">
-                <span class="input-group-text" id="basic-addon2">Nome do ponto</span>
+                <span class="input-group-text" id="basic-addon2">{% trans "FILTER_ATRAC_LABEL" %}</span>
                 <input type="text" name="search" class="form-control" aria-describedby="basic-addon2">
             </div>
         </div>
         <div class="col-md-6">
             <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">Categoria</span>
+                <span class="input-group-text" id="basic-addon1">{% trans "FILTER_CATEG" %}</span>
                 <select name="category" class="form-select" aria-describedby="basic-addon3">
-                    <option value="">Selecione...</option>
+                    <option value="">{% trans "LABEL_SELECT_OPTION" %}</option>
                     {% for categoria in categorias %}
                         <option value="{{ categoria }}">{{ categoria }}</option>
                     {% endfor %}
@@ -22,7 +23,7 @@
             </div>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+            <button type="submit" class="btn btn-primary mt-3">{% trans "BTN_FILTER" %} Filtrar</button>
         </div>
     </form>
 </div>
@@ -47,7 +48,7 @@
                                 <h5 class="card-title">📍 {{ ponto.address }}</h5>
                                 <span class="card-text d-block">📞 {{ponto.phone}}</span>
                             </div>
-                            <a href="{{ ponto.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
+                            <a href="{{ ponto.website }}" class="btn btn-success mt-1" target="_blank">{% trans "BTN_GO_SITE" %} Ir para o site</a>
                         </div>
                         {% if ponto.image %}
                             <div class="col p-0 m-0 w-100" style="background-Image: url('{{ ponto.image.url }}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
@@ -62,8 +63,8 @@
             <nav aria-label="Page navigation">
                 <ul class="pagination justify-content-center">
                     {% if page_obj.has_previous %}
-                        <li class="page-item"><a class="page-link" href="?page=1">Primeiro</a></li>
-                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+                        <li class="page-item"><a class="page-link" href="?page=1">{% trans "PGN_FRIST" %} Primeiro</a></li>
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans "PGN_PREV" %} Anterior</a></li>
                     {% endif %}
                     {% for num in page_obj.paginator.page_range %}
                         {% if page_obj.number == num %}
@@ -73,8 +74,8 @@
                         {% endif %}
                     {% endfor %}
                     {% if page_obj.has_next %}
-                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Próximo</a></li>
-                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Último</a></li>
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans "PGN_NEXT" %} Próximo</a></li>
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">{% trans "PGN_LAST" %} Último</a></li>
                     {% endif %}
                 </ul>
             </nav>            
@@ -85,7 +86,7 @@
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center" style="color: white;">Nenhum ponto turístico encontrado</h1>
+            <h1 class="text-center" style="color: white;">{% trans "NO_ATTRAC" %}</h1>
         </div>
     </div>
 </div>

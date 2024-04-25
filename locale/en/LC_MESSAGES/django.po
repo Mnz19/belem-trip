@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-24 23:14-0300\n"
+"POT-Creation-Date: 2024-04-24 23:31-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,26 +71,32 @@ msgid "HOTEL_SELECT_OPTION"
 msgstr "Choose..."
 
 #: .\belemtrip\templates\hoteis.html:30
+#: .\belemtrip\templates\pontos_turisticos.html:25
 msgid "BTN_FILTER"
 msgstr "Filter"
 
 #: .\belemtrip\templates\hoteis.html:57
+#: .\belemtrip\templates\pontos_turisticos.html:50
 msgid "BTN_GO_SITE"
 msgstr "Go to website"
 
 #: .\belemtrip\templates\hoteis.html:73
+#: .\belemtrip\templates\pontos_turisticos.html:65
 msgid "PGN_FRIST"
 msgstr "First"
 
 #: .\belemtrip\templates\hoteis.html:74
+#: .\belemtrip\templates\pontos_turisticos.html:66
 msgid "PGN_PREV"
 msgstr "Previous"
 
 #: .\belemtrip\templates\hoteis.html:84
+#: .\belemtrip\templates\pontos_turisticos.html:76
 msgid "PGN_NEXT"
 msgstr ""
 
 #: .\belemtrip\templates\hoteis.html:85
+#: .\belemtrip\templates\pontos_turisticos.html:77
 msgid "PGN_LAST"
 msgstr "Last"
 
@@ -159,6 +165,22 @@ msgstr "Read more"
 #: .\belemtrip\templates\noticias.html:51
 msgid "No news"
 msgstr "No news found"
+
+#: .\belemtrip\templates\pontos_turisticos.html:9
+msgid "FILTER_ATRAC_LABEL"
+msgstr "Attraction name"
+
+#: .\belemtrip\templates\pontos_turisticos.html:15
+msgid "FILTER_CATEG"
+msgstr "Category"
+
+#: .\belemtrip\templates\pontos_turisticos.html:17
+msgid "LABEL_SELECT_OPTION"
+msgstr "Choose..."
+
+#: .\belemtrip\templates\pontos_turisticos.html:88
+msgid "NO_ATTRAC"
+msgstr "No tourist attractions found"
 
 #: .\belemtrip\templates\restaurantes.html:10
 msgid "FILTER_LABEL_REST_NAME"
