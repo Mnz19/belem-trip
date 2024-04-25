@@ -12,9 +12,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-1(#1_rb@m-rpvh$2v^()1q*2g(g^8w=&wq*$r-%5kz%6%peq%7"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev','https://*.127.0.0.1']
 
 
 # Application definition
