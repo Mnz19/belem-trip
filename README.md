@@ -1,4 +1,4 @@
-# Belem Trip - Guia Turístico da COP-30 em Belém do Pará
+# Belem Trip - Guia Turístico da COP-30 em Belém do Pará 🌴🌍
 
 Bem-vindo ao Belem Trip! Este projeto Django foi desenvolvido para fornecer informações úteis para os participantes da Conferência das Partes (COP) 30 e turistas que visitam Belém do Pará durante o evento. Aqui você encontrará detalhes sobre os eventos da COP, notícias relevantes, além de informações sobre restaurantes, hotéis e pontos turísticos na encantadora cidade de Belém.
 
@@ -16,7 +16,7 @@ Bem-vindo ao Belem Trip! Este projeto Django foi desenvolvido para fornecer info
 
 6. **Mapa Interativo de Transporte**: Visualize rotas de ônibus e ciclofaixas em Belém do Pará com um mapa interativo. Este recurso permite planejar seus deslocamentos pela cidade de forma conveniente e sustentável.
 
-## Instalação
+## Instalação 🛠️
 
 1. Clone o repositório: `git clone https://github.com/Mnz19/belem-trip.git`
 2. Navegue até o diretório do projeto: `cd nome-do-repositorio`
@@ -36,10 +36,6 @@ Bem-vindo ao Belem Trip! Este projeto Django foi desenvolvido para fornecer info
 6. Inicie o servidor de desenvolvimento: `python manage.py runserver`
 7. Acesse o site em seu navegador: `http://localhost:8000`
 
-## Contribuição
-
-- Contribuições são bem-vindas! Se você deseja propor uma nova funcionalidade, reportar um bug ou apenas melhorar a documentação, sinta-se à vontade para abrir uma issue ou enviar um pull request.
-
-## Licença
+## Licença 📝
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
