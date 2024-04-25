@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <main>
@@ -8,17 +9,23 @@
 
     <div class="row featurette parallax">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1" data-aos="zoom-in" data-aos-duration="1000">Bem-vindo a Belém do Pará!</h2>
-        <p class="lead" data-aos="zoom-in" data-aos-duration="1000">Descubra a rica cultura e a deliciosa gastronomia da porta de entrada para a Amazônia. Explore
-          nossas tradições e sinta o calor acolhedor de nossa gente. Esperamos por você!</p>
+        <h2 class="featurette-heading fw-normal lh-1" data-aos="zoom-in" data-aos-duration="1000">
+          {% trans "Bem-vindo a Belém do Pará!" %}
+        </h2>
+        <p class="lead" data-aos="zoom-in" data-aos-duration="1000">
+          {% trans "Descubra a rica cultura e a deliciosa gastronomia da porta de entrada para a Amazônia. Explore nossas tradições e sinta o calor acolhedor de nossa gente. Esperamos por você!" %}
+        </p>
       </div>
     </div>
 
     <div class="row featurette d-flex justify-content-center align-items-center text-center">
       <div class="col-md-7 p-0 m-0">
-        <h2 class="featurette-heading fw-normal lh-1" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >Transporte Coletivo</h2>
-        <p class="lead" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >Encontre aqui seu guia para o transporte público! Descubra rotas disponíveis para facilitar sua
-          locomoção.</p>
+        <h2 class="featurette-heading fw-normal lh-1" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >
+          {% trans "Transporte Coletivo" %}
+        </h2>
+        <p class="lead" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >
+          {% trans "Encontre aqui seu guia para o transporte público! Descubra rotas disponíveis para facilitar sua locomoção." %}
+        </p>
       </div>
       <div class="col mapa">
         <iframe width="100%" height="700px"
@@ -29,10 +36,12 @@
     
     <div class="row featurette d-flex justify-content-center align-items-center text-center">
       <div class="col-md-7 order-sm-1 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >Ciclovias</h2>
-        <p class="lead" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >Explore as ciclovias para uma locomoção sustentável! Pedale pela cidade enquanto contribui para
-          um ambiente mais limpo e saudável. Descubra rotas seguras e aproveite a liberdade de se locomover de forma
-          ecológica.</p>
+        <h2 class="featurette-heading fw-normal lh-1" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >
+          {% trans "Ciclovias" %}
+        </h2>
+        <p class="lead" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >
+          {% trans "Explore as ciclovias para uma locomoção sustentável! Pedale pela cidade enquanto contribui para um ambiente mais limpo e saudável. Descubra rotas seguras e aproveite a liberdade de se locomover de forma ecológica." %}
+        </p>
       </div>
       <div class="col mapa order-sm-2 order-md-1">
         <iframe width="100%" height="700px"
@@ -43,8 +52,12 @@
 
     <div class="row featurette d-flex justify-content-center align-items-center text-center mt-5 mb-5">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >Aplicativos</h2>
-        <p class="lead" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >Explore a praticidade e eficiência dos aplicativos de mobilidade urbana como Uber, 99 e Moovit. Facilite suas viagens e deslocações diárias com rapidez e segurança. Baixe agora e movimente-se de maneira inteligente pela cidade!</p>
+        <h2 class="featurette-heading fw-normal lh-1" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >
+          {% trans "Aplicativos" %}
+        </h2>
+        <p class="lead" data-aos="fade-in" data-aos-duration="750" data-aos-anchor-placement="top-bottom" >
+          {% trans "Explore a praticidade e eficiência dos aplicativos de mobilidade urbana como Uber, 99 e Moovit. Facilite suas viagens e deslocações diárias com rapidez e segurança. Baixe agora e movimente-se de maneira inteligente pela cidade!" %}
+        </p>
       </div>
       <div class="col">
         <img src="{% static 'images/uber_logo.png' %}" alt="Apps" class="img-fluid" width="100">

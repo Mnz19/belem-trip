@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-24 20:50-0300\n"
+"POT-Creation-Date: 2024-04-24 21:19-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\belemtrip\templates\index.html:13
+msgid "Bem-vindo a Belém do Pará!"
+msgstr "Bem-vindo a Belém do Pará!"
+
+#: .\belemtrip\templates\index.html:16
+msgid ""
+"Descubra a rica cultura e a deliciosa gastronomia da porta de entrada para a "
+"Amazônia. Explore nossas tradições e sinta o calor acolhedor de nossa gente. "
+"Esperamos por você!"
+msgstr ""
+"Descubra a rica cultura e a deliciosa gastronomia da porta de entrada para a "
+"Amazônia. Explore nossas tradições e sinta o calor acolhedor de nossa gente. "
+"Esperamos por você!"
+
+#: .\belemtrip\templates\index.html:24
+msgid "Transporte Coletivo"
+msgstr "Transporte Coletivo"
+
+#: .\belemtrip\templates\index.html:27
+msgid ""
+"Encontre aqui seu guia para o transporte público! Descubra rotas disponíveis "
+"para facilitar sua locomoção."
+msgstr ""
+"Encontre aqui seu guia para o transporte público! Descubra rotas disponíveis "
+"para facilitar sua locomoção."
+
+#: .\belemtrip\templates\index.html:40
+msgid "Ciclovias"
+msgstr "Ciclovias"
+
+#: .\belemtrip\templates\index.html:43
+msgid ""
+"Explore as ciclovias para uma locomoção sustentável! Pedale pela cidade "
+"enquanto contribui para um ambiente mais limpo e saudável. Descubra rotas "
+"seguras e aproveite a liberdade de se locomover de forma ecológica."
+msgstr ""
+"Explore as ciclovias para uma locomoção sustentável! Pedale pela cidade "
+"enquanto contribui para um ambiente mais limpo e saudável. Descubra rotas "
+"seguras e aproveite a liberdade de se locomover de forma ecológica."
+
+#: .\belemtrip\templates\index.html:56
+msgid "Aplicativos"
+msgstr "Aplicativos"
+
+#: .\belemtrip\templates\index.html:59
+msgid ""
+"Explore a praticidade e eficiência dos aplicativos de mobilidade urbana como "
+"Uber, 99 e Moovit. Facilite suas viagens e deslocações diárias com rapidez e "
+"segurança. Baixe agora e movimente-se de maneira inteligente pela cidade!"
+msgstr ""
+"Explore a praticidade e eficiência dos aplicativos de mobilidade urbana como "
+"Uber, 99 e Moovit. Facilite suas viagens e deslocações diárias com rapidez e "
+"segurança. Baixe agora e movimente-se de maneira inteligente pela cidade!"
 
 #: .\templates\base.html:40
 msgid "Inicio"
