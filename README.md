@@ -19,6 +19,7 @@ Bem-vindo ao Belem Trip! Este projeto Django foi desenvolvido para fornecer info
 ## Administração
 
 **Usuário**: admin
+
 **Senha**:asenha123
 
 ## Instalação 🛠️
