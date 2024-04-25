@@ -36,16 +36,15 @@
                         <div class="col-8 d-flex flex-column justify-content-evenly">
                             <div>
                                 <h2 class="card-title"><strong>{{ ponto.name }}</strong></h2>
-                                <h4 class="card-title">
-                                    <strong>
-                                        {{ ponto.category}}
-                                    </strong>
-                                </h4>
+                                <h5 class="card-title">
+                                        🏷️ {{ ponto.category}}
+                                </h5>
                             </div>
                             <hr>
                             <div>
                                 <h5 class="card-title">📍 {{ ponto.address }}</h5>
                                 <span class="card-text d-block">📞 {{ponto.phone}}</span>
+                                <span class="card-text d-block">➞ {{ponto.description}}</span>
                             </div>
                             <a href="{{ ponto.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
                         </div>

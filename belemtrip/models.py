@@ -10,7 +10,7 @@ class Base(models.Model):
         abstract = True
         
 class News(Base):
-    title = models.CharField("Título", max_length=25)
+    title = models.CharField("Título", max_length=50)
     content = models.TextField("Conteúdo")
     website = models.URLField("Website", null=True, blank=True)
     image = models.ImageField("Imagem", upload_to="news", null=True, blank=True)
@@ -52,7 +52,7 @@ class Event(Base):
 class Place(Base):
     name = models.CharField("Nome", max_length=25)
     description = models.TextField("Descrição", blank=True, null=True)
-    address = models.CharField("Endereço", max_length=50)
+    address = models.CharField("Endereço", max_length=255)
     image = models.ImageField("Imagem", upload_to="places", null=True, blank=True)
     coordenada = models.CharField("Coordenadas", max_length=50, blank=True, null=True)
     slug = models.SlugField("Slug", max_length=50, unique=True, blank=True, editable=False)
@@ -71,7 +71,7 @@ class Place(Base):
         
 
 class RestaurantCategory(Base):
-    name = models.CharField("Nome", max_length=25)
+    name = models.CharField("Nome", max_length=50)
     slug = models.SlugField("Slug", max_length=50, unique=True, blank=True, editable=False)
 
     def save(self, *args, **kwargs):
@@ -87,7 +87,7 @@ class RestaurantCategory(Base):
         verbose_name_plural = "Categorias de Restaurantes"
 
 class TouristSpotCategory(Base):
-    name = models.CharField("Nome", max_length=25)
+    name = models.CharField("Nome", max_length=50)
     slug = models.SlugField("Slug", max_length=50, unique=True, blank=True, editable=False)
     
     def save(self, *args, **kwargs):
