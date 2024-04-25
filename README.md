@@ -16,6 +16,11 @@ Bem-vindo ao Belem Trip! Este projeto Django foi desenvolvido para fornecer info
 
 6. **Mapa Interativo de Transporte**: Visualize rotas de ônibus e ciclofaixas em Belém do Pará com um mapa interativo. Este recurso permite planejar seus deslocamentos pela cidade de forma conveniente e sustentável.
 
+## Administração
+
+**Usuário**: admin
+**Senha**:asenha123
+
 ## Instalação 🛠️
 
 1. Clone o repositório: `git clone https://github.com/Mnz19/belem-trip.git`
