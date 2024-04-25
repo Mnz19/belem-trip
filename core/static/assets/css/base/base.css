@@ -66,6 +66,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0px!important;
 }
 
 .mapa {
@@ -73,7 +74,7 @@ main {
 }
 
 .row {
-    padding: 1rem;
+    margin: 1rem;
 }
 
 .elementos_fundo {
