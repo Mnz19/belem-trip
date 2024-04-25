@@ -1,23 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <div class="row mb-3">
     <form method="GET" action="" class="row g-3">
         <div class="col-md-6">
             <div class="input-group">
-                <span class="input-group-text" id="basic-addon2">Nome do Evento</span>
+                <span class="input-group-text" id="basic-addon2">{% trans "Nome do Evento" %}</span>
                 <input type="text" name="search" class="form-control" aria-describedby="basic-addon2">
             </div>
         </div>
         <div class="col-md-6">
             <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">Data</span>
+                <span class="input-group-text" id="basic-addon1">{% trans "Data" %}</span>
                 <input type="date" name="date" class="form-control" aria-describedby="basic-addon1">
             </div>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+            <button type="submit" class="btn btn-primary mt-3">{% trans "Filtrar" %}</button>
         </div>
     </form>
 </div>
@@ -39,7 +40,7 @@
                                 <span class="card-text d-block">📌 {{evento.location}}</span>
                                 <span class="card-text">📝 {{ evento.description }}</span>
                             </div>
-                            <a href="{{ evento.website }}" class="btn btn-success mt-1" target="_blank">Ir para o site</a>
+                            <a href="{{ evento.website }}" class="btn btn-success mt-1" target="_blank">{% trans "Ir para o site" %}</a>
                         </div>
                         <div class="col p-0 m-0 w-100" style="background-Image: url('{{ evento.image.url }}'); background-size: cover; background-position: center; border-radius: 0 5 5 0;">
                         </div>
@@ -51,8 +52,8 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li class="page-item"><a class="page-link" href="?page=1">Primeiro</a></li>
-            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="?page=1">{% trans "Primeiro" %}</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans "Anterior" %}</a></li>
             {% endif %}
             {% for num in page_obj.paginator.page_range %}
             {% if page_obj.number == num %}
@@ -62,8 +63,8 @@
                 {% endif %}
                 {% endfor %}
                 {% if page_obj.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Proximo</a></li>
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Ultimo</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans "Proximo" %}</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">{% trans "Ultimo" %}</a></li>
                 {% endif %}
         </ul>
     </nav>
@@ -72,7 +73,7 @@
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center" style="color: white;">Nenhum evento encontrado</h1>
+            <h1 class="text-center" style="color: white;">{% trans "Nenhum evento encontrado" %}</h1>
         </div>
     </div>
 </div>

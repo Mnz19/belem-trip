@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-24 21:19-0300\n"
+"POT-Creation-Date: 2024-04-24 21:55-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\belemtrip\templates\eventos.html:9
+msgid "Nome do Evento"
+msgstr "Event Name"
+
+#: .\belemtrip\templates\eventos.html:15
+msgid "Data"
+msgstr "Date"
+
+#: .\belemtrip\templates\eventos.html:20
+msgid "Filtrar"
+msgstr "Filter"
+
+#: .\belemtrip\templates\eventos.html:42
+msgid "Ir para o site"
+msgstr "Go to website"
+
+#: .\belemtrip\templates\eventos.html:54
+msgid "Primeiro"
+msgstr "First"
+
+#: .\belemtrip\templates\eventos.html:55
+msgid "Anterior"
+msgstr "Previous"
+
+#: .\belemtrip\templates\eventos.html:65
+msgid "Proximo"
+msgstr "Next"
+
+#: .\belemtrip\templates\eventos.html:66
+msgid "Ultimo"
+msgstr "Last"
+
+#: .\belemtrip\templates\eventos.html:75
+msgid "Nenhum evento encontrado"
+msgstr "No events found"
 
 #: .\belemtrip\templates\index.html:13
 msgid "Bem-vindo a Belém do Pará!"
@@ -41,8 +77,8 @@ msgid ""
 "Encontre aqui seu guia para o transporte público! Descubra rotas disponíveis "
 "para facilitar sua locomoção."
 msgstr ""
-"Find your guide to public transportation here! Discover available routes to make "
-"getting around easier."
+"Find your guide to public transportation here! Discover available routes to "
+"make getting around easier."
 
 #: .\belemtrip\templates\index.html:40
 msgid "Ciclovias"
@@ -68,8 +104,8 @@ msgid ""
 "Uber, 99 e Moovit. Facilite suas viagens e deslocações diárias com rapidez e "
 "segurança. Baixe agora e movimente-se de maneira inteligente pela cidade!"
 msgstr ""
-"Explore the convenience and efficiency of urban mobility apps like "
-"Uber, 99, and Moovit. Simplify your travels and daily commutes quickly and safely. "
+"Explore the convenience and efficiency of urban mobility apps like Uber, 99, "
+"and Moovit. Simplify your travels and daily commutes quickly and safely. "
 "Download now and move smartly through the city!"
 
 #: .\templates\base.html:40

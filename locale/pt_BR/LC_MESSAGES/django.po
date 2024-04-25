@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-24 21:19-0300\n"
+"POT-Creation-Date: 2024-04-24 21:55-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\belemtrip\templates\eventos.html:9
+msgid "Nome do Evento"
+msgstr "Nome do Evento"
+
+#: .\belemtrip\templates\eventos.html:15
+msgid "Data"
+msgstr "Data"
+
+#: .\belemtrip\templates\eventos.html:20
+msgid "Filtrar"
+msgstr "Filtrar"
+
+#: .\belemtrip\templates\eventos.html:42
+msgid "Ir para o site"
+msgstr "Ir para o site"
+
+#: .\belemtrip\templates\eventos.html:54
+msgid "Primeiro"
+msgstr "Primeiro"
+
+#: .\belemtrip\templates\eventos.html:55
+msgid "Anterior"
+msgstr "Anterior"
+
+#: .\belemtrip\templates\eventos.html:65
+msgid "Proximo"
+msgstr "Próximo"
+
+#: .\belemtrip\templates\eventos.html:66
+msgid "Ultimo"
+msgstr "Último"
+
+#: .\belemtrip\templates\eventos.html:75
+msgid "Nenhum evento encontrado"
+msgstr "Nenhum evento encontrado"
 
 #: .\belemtrip\templates\index.html:13
 msgid "Bem-vindo a Belém do Pará!"
