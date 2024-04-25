@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
     
 {% block content %}
     {% if noticias %}
@@ -14,7 +15,7 @@
                                 <p class="card-text" style="max-height: 90px; overflow: hidden; text-overflow: ellipsis;">{{ noticia.description }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="{{ noticia.url }}" class="btn btn-success mt-1" target="_blank">Ver mais</a>
+                                        <a href="{{ noticia.url }}" class="btn btn-success mt-1" target="_blank">{% trans "Ver mais" %}</a>
                                     </div>
                                     <small class="text-muted
                                     ">{{ noticia.publishedAt }}</small>
@@ -26,8 +27,8 @@
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         {% if page_obj.has_previous %}
-                            <li class="page-item"><a class="page-link" href="?page=1">Primeiro</a></li>
-                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+                            <li class="page-item"><a class="page-link" href="?page=1">{% trans "Primeiro" %}</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans "Anterior" %}</a></li>
                         {% endif %}
                         {% for num in page_obj.paginator.page_range %}
                             {% if page_obj.number == num %}
@@ -37,8 +38,8 @@
                             {% endif %}
                         {% endfor %}
                         {% if page_obj.has_next %}
-                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Proximo</a></li>
-                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Ultimo</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans "Proximo" %}</a></li>
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">{% trans "Ultimo" %}</a></li>
                         {% endif %}
                     </ul>
                 </nav>
@@ -47,7 +48,7 @@
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center" style="color: white;">Nenhuma noticia encontrado</h1>
+                <h1 class="text-center" style="color: white;">{% trans "No news" %}</h1>
             </div>
         </div>
     </div>

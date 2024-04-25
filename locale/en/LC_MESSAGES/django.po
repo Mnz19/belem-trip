@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-24 21:55-0300\n"
+"POT-Creation-Date: 2024-04-24 23:14-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,41 +18,85 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\belemtrip\templates\eventos.html:9
+#: .\belemtrip\templates\eventos.html:10
 msgid "Nome do Evento"
 msgstr "Event Name"
 
-#: .\belemtrip\templates\eventos.html:15
+#: .\belemtrip\templates\eventos.html:16
 msgid "Data"
 msgstr "Date"
 
-#: .\belemtrip\templates\eventos.html:20
+#: .\belemtrip\templates\eventos.html:21
+#: .\belemtrip\templates\restaurantes.html:26
 msgid "Filtrar"
 msgstr "Filter"
 
-#: .\belemtrip\templates\eventos.html:42
+#: .\belemtrip\templates\eventos.html:43
+#: .\belemtrip\templates\restaurantes.html:54
 msgid "Ir para o site"
 msgstr "Go to website"
 
-#: .\belemtrip\templates\eventos.html:54
+#: .\belemtrip\templates\eventos.html:55 .\belemtrip\templates\noticias.html:30
+#: .\belemtrip\templates\restaurantes.html:69
 msgid "Primeiro"
 msgstr "First"
 
-#: .\belemtrip\templates\eventos.html:55
+#: .\belemtrip\templates\eventos.html:56 .\belemtrip\templates\noticias.html:31
+#: .\belemtrip\templates\restaurantes.html:70
 msgid "Anterior"
 msgstr "Previous"
 
-#: .\belemtrip\templates\eventos.html:65
+#: .\belemtrip\templates\eventos.html:66 .\belemtrip\templates\noticias.html:41
 msgid "Proximo"
 msgstr "Next"
 
-#: .\belemtrip\templates\eventos.html:66
+#: .\belemtrip\templates\eventos.html:67 .\belemtrip\templates\noticias.html:42
 msgid "Ultimo"
 msgstr "Last"
 
-#: .\belemtrip\templates\eventos.html:75
+#: .\belemtrip\templates\eventos.html:76
 msgid "Nenhum evento encontrado"
 msgstr "No events found"
+
+#: .\belemtrip\templates\hoteis.html:11
+msgid "HOTEL_LABEL_NAME"
+msgstr "Hotel Name"
+
+#: .\belemtrip\templates\hoteis.html:18
+msgid "FILTER_LABEL_STARS"
+msgstr "Stars"
+
+#: .\belemtrip\templates\hoteis.html:20
+msgid "HOTEL_SELECT_OPTION"
+msgstr "Choose..."
+
+#: .\belemtrip\templates\hoteis.html:30
+msgid "BTN_FILTER"
+msgstr "Filter"
+
+#: .\belemtrip\templates\hoteis.html:57
+msgid "BTN_GO_SITE"
+msgstr "Go to website"
+
+#: .\belemtrip\templates\hoteis.html:73
+msgid "PGN_FRIST"
+msgstr "First"
+
+#: .\belemtrip\templates\hoteis.html:74
+msgid "PGN_PREV"
+msgstr "Previous"
+
+#: .\belemtrip\templates\hoteis.html:84
+msgid "PGN_NEXT"
+msgstr ""
+
+#: .\belemtrip\templates\hoteis.html:85
+msgid "PGN_LAST"
+msgstr "Last"
+
+#: .\belemtrip\templates\hoteis.html:96
+msgid "NO_HOTEL"
+msgstr "No Hotels found"
 
 #: .\belemtrip\templates\index.html:13
 msgid "Bem-vindo a Belém do Pará!"
@@ -108,6 +152,42 @@ msgstr ""
 "and Moovit. Simplify your travels and daily commutes quickly and safely. "
 "Download now and move smartly through the city!"
 
+#: .\belemtrip\templates\noticias.html:18
+msgid "Ver mais"
+msgstr "Read more"
+
+#: .\belemtrip\templates\noticias.html:51
+msgid "No news"
+msgstr "No news found"
+
+#: .\belemtrip\templates\restaurantes.html:10
+msgid "FILTER_LABEL_REST_NAME"
+msgstr "Restaurant Name"
+
+#: .\belemtrip\templates\restaurantes.html:16
+msgid "Categoria"
+msgstr "Category"
+
+#: .\belemtrip\templates\restaurantes.html:18
+msgid "Selecione..."
+msgstr "Choose..."
+
+#: .\belemtrip\templates\restaurantes.html:80
+#, fuzzy
+#| msgid "Proximo"
+msgid "Próximo"
+msgstr "Next"
+
+#: .\belemtrip\templates\restaurantes.html:81
+#, fuzzy
+#| msgid "Ultimo"
+msgid "Último"
+msgstr "Last"
+
+#: .\belemtrip\templates\restaurantes.html:92
+msgid "NO_REST_LIST"
+msgstr "No restaurants found"
+
 #: .\templates\base.html:40
 msgid "Inicio"
 msgstr "Home"
@@ -151,3 +231,23 @@ msgstr "Contact"
 #: .\templates\base.html:110
 msgid "Voltar para o inicio"
 msgstr "Back to top"
+
+#, fuzzy
+#~| msgid "FILTER_LABEL_REST_NAME"
+#~ msgid "FILTER_LABEL_HOTEL_NAME"
+#~ msgstr "Restaurant Name"
+
+#, fuzzy
+#~| msgid "Nenhum evento encontrado"
+#~ msgid "Nenhum restaurante encontrado"
+#~ msgstr "No events found"
+
+#, fuzzy
+#~| msgid "Restaurantes"
+#~ msgid "Nome do Restaurante"
+#~ msgstr "Restaurants"
+
+#, fuzzy
+#~| msgid "Nenhum evento encontrado"
+#~ msgid "Nenhuma noticia encontrado"
+#~ msgstr "No events found"
