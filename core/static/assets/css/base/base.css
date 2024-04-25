@@ -56,7 +56,7 @@ main {
 }
 
 .parallax {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../images/THEATRO.jpg");
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../images/belemtrip-home2.gif");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
