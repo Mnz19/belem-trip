@@ -39,6 +39,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -97,12 +98,20 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "pt-br"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Sao_Paulo"
 
 USE_I18N = True
 
 USE_TZ = True
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, "locale"),
+]
+
+LANGUAGES = [
+    ('pt-br', 'Português Brasileiro'),
+    ('en', 'English'),
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
@@ -137,12 +146,12 @@ JAZZMIN_SETTINGS = {
         'belemtrip.restaurantCategory',
         'belemtrip.touristSpotCategory',
     ],
-    
+
     'topmenu_links': [
         {'name': 'Início',  'url': 'admin:index', 'permissions': ['auth.view_user']},
-        {'name': 'Voltar ao site', 'url': 'index'},  
+        {'name': 'Voltar ao site', 'url': 'index'},
     ],
-    
+
     'icons': {
         'belemtrip.news': 'fas fa-newspaper',
         'belemtrip.event': 'fas fa-calendar',
@@ -152,8 +161,8 @@ JAZZMIN_SETTINGS = {
         'belemtrip.touristSpot': 'fas fa-camera',
         'belemtrip.restaurantCategory': 'fas fa-tag',
         'belemtrip.touristSpotCategory': 'fas fa-tag',
-        "auth" : "fas fa-users-cog",
-        "auth.user" : "fas fa-user",
-        "auth.group" : "fas fa-users",
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.group": "fas fa-users",
     },
 }

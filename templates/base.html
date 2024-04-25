@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!doctype html>
 <html lang="pt-br" data-bs-theme="auto">
 
@@ -36,25 +37,51 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">{% trans "Inicio" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'eventos' %}">Eventos</a>
+                            <a class="nav-link" href="{% url 'eventos' %}">{% trans "Eventos" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
+                            <a class="nav-link" href="{% url 'noticias' %}">{% trans "Noticias" %}</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Locais
+                                {% trans "Locais" %}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'restaurantes' %}">Restaurantes</a></li>
-                                <li><a class="dropdown-item" href="{% url 'hoteis' %}">Hotéis</a></li>
-                                <li><a class="dropdown-item" href="{% url 'pontos' %}">Pontos Turísticos</a></li>
+                                <li><a class="dropdown-item" href="{% url 'restaurantes' %}">{% trans "Restaurantes" %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'hoteis' %}">{% trans "Hotéis" %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'pontos' %}">{% trans "Pontos Turísticos" %}</a></li>
                             </ul>
                         </li>
                     </ul>
+                </div>
+                <div class="header-content">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/" />
+                
+                        <select class="selectpicker" name="language" style="width: auto;" onchange="this.form.submit()">
+                          {% get_current_language as LANGUAGE_CODE %}
+                          {% get_available_languages as LANGUAGES %}
+                          {% get_language_info_list for LANGUAGES as languages %}
+                          {% for language in languages %}
+                
+                              <option
+                                value="{{ language.code }}"
+                                {% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}
+                                data-content='
+                                <span style="display:inline-block; width:100px; padding-left: 10px; text-shadow:none">
+                                  {{ language.name_local }}
+                                  <!-- span style="color:#999;">&nbsp;[{{ language.code }}]</span -->
+                                </span>'>
+                                {{ language.name_local }}
+                              </option>
+                
+                          {% endfor %}
+                        </select>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -71,16 +98,16 @@
                 </div>
                 <div class="col-md-6 text-end">
                     <p>
-                        <a href="#" class="text-light me-3"><i class="bi bi-shield-lock"></i> Privacy</a>
-                        <a href="#" class="text-light me-3"><i class="bi bi-file-earmark-text"></i> Terms</a>
-                        <a href="#" class="text-light"><i class="bi bi-envelope"></i> Contact</a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-shield-lock"></i>{% trans "Privacy" %}</a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-file-earmark-text"></i>{% trans "Terms" %}</a>
+                        <a href="#" class="text-light"><i class="bi bi-envelope"></i>{% trans "Contact" %}</a>
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-end">
                     <p class="mb-0 mt-3">
-                        <a href="#" class="text-light">Voltar para o inicio</a>
+                        <a href="#" class="text-light">{% trans "Voltar para o inicio" %}</a>
                     </p>
                 </div>
             </div>
